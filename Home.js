@@ -2,6 +2,7 @@ import {View, Text} from 'react-native';
 import HeaderTab from './HeaderTab';
 import Category from './Categories'
 import CategoryCard from './CategoryCard';
+import RecentCard from './RecentCard';
 import {Divider} from 'react-native-elements'
 
 export default function Home(){
@@ -11,6 +12,7 @@ export default function Home(){
         <Category />
         <Divider width={1}/>
         <CategoryCard />
+        <RecentCard />
         </View>
     )
 }
