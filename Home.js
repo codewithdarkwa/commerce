@@ -19,19 +19,19 @@ export default function Home(){
             id:2,
             icon: "calendar",
             color:'grey',
-            name:"Home"
+            name:"Wallet"
         },  
         {
             id:3,
             icon: "message-circle",
             color:'grey',
-            name:"Home"
+            name:"Statistics"
         },
         {
             id:2,
             icon: "settings",
             color:'grey', 
-            name:"Home"
+            name:"Profile"
         },
 
 ]
@@ -56,6 +56,6 @@ export default function Home(){
 const BottomIcons = ({icon})=> (
     <TouchableOpacity style={{margin:10}}>
      <Feather name={icon.icon} size={30} color={icon.color}/>
-     <Text>{icon.name}</Text>
+     <Text style={{color:icon.color}}>{icon.name}</Text>
     </TouchableOpacity>
  )

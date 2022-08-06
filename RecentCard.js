@@ -57,7 +57,7 @@ const ProductContainer = ({product}) =>(
    </View>
    <Text style={{width:200, color:"grey",marginLeft:15}}>The intuitive and intelligent MacBook is here. Order ...</Text>
   <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
-    <Text style={{marginLeft:15,marginTop:10,fontSize:18,fontWeight:"900"}}>{product.price}</Text>
+    <Text style={{marginLeft:15,marginTop:10,fontSize:20,fontWeight:"900"}}>{product.price}</Text>
     <TouchableOpacity>
     <FontAwesome5 name="plus" size={15} style={{marginRight:10,backgroundColor:"green",color:"#fff",padding:10,borderRadius:5}}/>
     </TouchableOpacity>
