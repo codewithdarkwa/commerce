@@ -30,7 +30,7 @@ export default function RecentCard(){
     },
 ]
     return(
-        <View>
+        <View style={{marginTop:20}}>
           <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between",margin:15}}>
             <Text style={{fontSize:17,fontWeight:"800"}}>Recently Viewed</Text>
             <Text style={{color:"grey",fontSize:15,}}>see all</Text>
