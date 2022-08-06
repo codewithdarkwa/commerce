@@ -17,7 +17,7 @@ const products = [
     },
     {
         id:3,
-        src:require('./assets/image/head.png'),
+        src:require('./assets/image/Head.png'),
         color:'#eee',
         price:450
     },

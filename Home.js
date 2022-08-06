@@ -7,7 +7,7 @@ import {Divider} from 'react-native-elements'
 import {Feather} from 'react-native-vector-icons'
 
 
-export default function Home(){
+const Home = () =>{
     const bottomIcons = [
         {
             id:1,
@@ -36,8 +36,7 @@ export default function Home(){
 
 ]
     return(
-        <SafeAreaView>
-   
+        <SafeAreaView style={{flex:1}}>
         <ScrollView>
         <HeaderTab />
         <Category />
@@ -46,15 +45,16 @@ export default function Home(){
         <RecentCard />
         </ScrollView>
           <Divider width={0.5}/>
-          <View style={{flexDirection:"row",justifyContent:"space-around",alignItems:"center"}}>
+          <View style={{flexDirection:"row",justifyContent:"space-between"}}>
               { bottomIcons.map((icon, i) => <BottomIcons key={i} icon={icon}/>)}
           </View>
         </SafeAreaView>
     )
 }
 
+export default Home
 const BottomIcons = ({icon})=> (
-    <TouchableOpacity style={{margin:10}}>
+    <TouchableOpacity style={{margin:5}}>
      <Feather name={icon.icon} size={30} color={icon.color}/>
      <Text style={{color:icon.color}}>{icon.name}</Text>
     </TouchableOpacity>
