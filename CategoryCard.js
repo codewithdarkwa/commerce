@@ -50,7 +50,7 @@ const products = [
 }
 
 const ProductContainer = ({product}) =>(
-<View>
+<View style={{padding:10}}>
    <TouchableOpacity style={{backgroundColor:product.color, width:200,height:200,borderRadius:15,margin:10}}>
     <Image source={product.src} resizeMode="cover" style={{width:150,height:150,alignSelf:"center"}}/>
     <TouchableOpacity style={{backgroundColor:"#000",padding:5,width:120,borderRadius:12,bottom:15,margin:5,top:5}}>
@@ -59,8 +59,8 @@ const ProductContainer = ({product}) =>(
    </TouchableOpacity>
    <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-around",marginLeft:5}}>
     <Text style={{fontSize:17,fontWeight:"600",marginRight:20}}>MacBook Air M1</Text>
-    <Text style={{fontWeight:"600"}}>{'$'+product.price}</Text>
+    <Text style={{fontWeight:"600",fontSize:17}}>{'$'+product.price}</Text>
    </View>
-   <Text style={{width:200, color:"grey",marginLeft:15}}>The intuitive and intelligent MacBook is here. Order ...</Text>
+   <Text style={{width:200, color:"grey",marginLeft:15,marginTop:10}}>The intuitive and intelligent MacBook is here. Order ...</Text>
 </View>
 )

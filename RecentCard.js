@@ -45,17 +45,17 @@ export default function RecentCard(){
 }
 
 const ProductContainer = ({product}) =>(
-<View>
-   <View style={{backgroundColor:product.color, width:200,height:200,borderRadius:15,margin:5}}>
+<View style={{padding:10}}>
+   <TouchableOpacity style={{backgroundColor:product.color, width:200,height:200,borderRadius:15,margin:5}}>
     <Image source={product.src}  style={{width:170,height:150,top:10,alignSelf:"center"}}/>
-   </View>
+   </TouchableOpacity>
    <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-around",marginLeft:5}}>
     <Text style={{fontSize:18,fontWeight:"700",marginRight:20}}>MacBook Air M1</Text>
-    <TouchableOpacity>
-    <Feather name="heart" size={20}/>
+    <TouchableOpacity style={{marginRight:15}}>
+    <Feather name="heart" color="grey" size={22} />
     </TouchableOpacity>
    </View>
-   <Text style={{width:200, color:"grey",marginLeft:15}}>The intuitive and intelligent MacBook is here. Order ...</Text>
+   <Text style={{width:200, color:"grey",marginLeft:6,margin:10}}>The intuitive and intelligent MacBook is here. Order ...</Text>
   <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
     <Text style={{marginLeft:15,marginTop:10,fontSize:20,fontWeight:"900"}}>{product.price}</Text>
     <TouchableOpacity>
