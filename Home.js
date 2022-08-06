@@ -4,33 +4,29 @@ import Category from './Categories'
 import CategoryCard from './CategoryCard';
 import RecentCard from './RecentCard';
 import {Divider} from 'react-native-elements'
-import {Feather} from 'react-native-vector-icons'
+import {Ionicons,Feather} from 'react-native-vector-icons'
 
 
 const Home = () =>{
     const bottomIcons = [
         {
             id:1,
-            icon: "home",
-            color:'teal',
+            icon:  <Feather name="home" size={30} color='grey'/>,
             name:"Home"
         }, 
         {
             id:2,
-            icon: "calendar",
-            color:'grey',
+            icon:  <Ionicons name="wallet" size={30} color='grey'/>,
             name:"Wallet"
         },  
         {
             id:3,
-            icon: "message-circle",
-            color:'grey',
+            icon: <Feather name='activity' size={30} color='grey'/>,
             name:"Statistics"
         },
         {
             id:2,
-            icon: "settings",
-            color:'grey', 
+           icon: <Ionicons name="settings" size={30} color='grey'/>,
             name:"Profile"
         },
 
@@ -45,17 +41,19 @@ const Home = () =>{
         <RecentCard />
         </ScrollView>
           <Divider width={0.5}/>
-          <View style={{flexDirection:"row",justifyContent:"space-between"}}>
-              { bottomIcons.map((icon, i) => <BottomIcons key={i} icon={icon}/>)}
+          <View style={{flexDirection:"row",justifyContent:"space-between", paddingHorizontal:15}}>
+              { bottomIcons.map((item, i) => <BottomIcons key={i} item={item}/>)}
           </View>
         </SafeAreaView>
     )
 }
 
 export default Home
-const BottomIcons = ({icon})=> (
+const BottomIcons = ({item})=> (
     <TouchableOpacity style={{margin:5}}>
-     <Feather name={icon.icon} size={30} color={icon.color}/>
-     <Text style={{color:icon.color}}>{icon.name}</Text>
+    {item.icon}
+     <Text style={{
+        color:'black'
+     }}>{item.name}</Text>
     </TouchableOpacity>
  )
