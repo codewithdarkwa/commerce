@@ -47,9 +47,7 @@ export default function Home(){
         </ScrollView>
           <Divider width={0.5}/>
           <View style={{flexDirection:"row",justifyContent:"space-around",alignItems:"center"}}>
-              {
-                  bottomIcons.map((icon, i) => <BottomIcons key={i} icon={icon}/>)
-              }
+              { bottomIcons.map((icon, i) => <BottomIcons key={i} icon={icon}/>)}
           </View>
         </SafeAreaView>
     )

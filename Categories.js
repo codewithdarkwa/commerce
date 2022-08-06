@@ -1,4 +1,4 @@
-import {View, Text,StyleSheet,Image,ScrollView} from 'react-native';
+import {View, Text,StyleSheet,Image,ScrollView, TouchableOpacity} from 'react-native';
 import {Feather} from 'react-native-vector-icons'
 
 export default function HeaderTab(){
@@ -28,15 +28,11 @@ const Categories = [
     return(
         <View style={styles.container}>
             <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
-             <View style={{padding:5}}>
+             <TouchableOpacity style={{padding:5}}>
                 <Feather name="sliders" size={24}/>
-            </View>
+            </TouchableOpacity>
             <ScrollView contentContainerStyle={{flexDirection:"row",}} showsHorizontalScrollIndicator={false} horizontal>
-             {
-                Categories.map((item,i)=> (
-                    <Category key={i} item={item}/>
-                ))
-             }
+             { Categories.map((item,i)=> <Category key={i} item={item}/>) }
             </ScrollView>
             </View>
         </View>
@@ -46,7 +42,7 @@ const Categories = [
 
  const Category = ({item}) =>(
     <View>
-        <View style={{
+        <TouchableOpacity style={{
             flexDirection:"row",
             alignItems:"center",
             borderWidth:0.5,
@@ -56,14 +52,13 @@ const Categories = [
             margin:5
         }}>
             <Image source={item.src} style={{width:40,height:40,borderRadius:10}}/>
-            <Text style={{fontSize:15}}>{item.name}</Text>
-        </View>
+            <Text style={{fontSize:15}}>{item.name}</Text>    
+        </TouchableOpacity>
     </View>
  )
 const styles = StyleSheet.create({
 
 container:{
     margin:15,
-
 }
 })

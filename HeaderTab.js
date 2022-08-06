@@ -1,6 +1,4 @@
-import {View, Text,StyleSheet,TextInput} from 'react-native';
-import { Searchbar } from 'react-native-paper';
-import { Input } from 'react-native-elements';
+import {View,StyleSheet,TextInput, TouchableOpacity} from 'react-native';
 import {FontAwesome5} from 'react-native-vector-icons'
 
 
@@ -8,7 +6,9 @@ export default function HeaderTab(){
     return(
         <View>
            <View style={styles.header}>
-           <FontAwesome5 name="chevron-left" size={24}/>
+            <TouchableOpacity>
+           <FontAwesome5 name="chevron-left" size={24} />
+            </TouchableOpacity>
            <TextInput 
            placeholder="Search for a products, cloth..."
            style={styles.input}
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
       alignItems:"center"
     },
     input:{
-     width:350,
+     width:'75%',
      padding:12,
      outline: "none",
      border:"none",
