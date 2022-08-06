@@ -12,7 +12,7 @@ const Home = () =>{
         {
             id:1,
             icon: "home",
-            color:'green',
+            color:'teal',
             name:"Home"
         }, 
         {

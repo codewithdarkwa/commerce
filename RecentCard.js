@@ -63,7 +63,7 @@ const ProductContainer = ({product}) =>(
   <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
     <Text style={{marginLeft:15,marginTop:10,fontSize:20,fontWeight:"900"}}>{product.price}</Text>
     <TouchableOpacity>
-    <FontAwesome5 name="plus" size={15} style={{marginRight:10,backgroundColor:"green",color:"#fff",padding:10,borderRadius:5}}/>
+    <FontAwesome5 name="plus" size={15} style={{marginRight:10,backgroundColor:"teal",color:"#fff",padding:10,}}/>
     </TouchableOpacity>
   </View>
 </View>
