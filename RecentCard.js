@@ -8,25 +8,29 @@ export default function RecentCard(){
         id:1,
         src:require('./assets/image/laptop4.png'),
         color:'#add8e6',
-        price:'$150'
+        price:'$150',
+        name:"MackBook Air M1"
     },
     {
         id:2,
-        src:require('./assets/image/headset2.jpg'),
+        src:require('./assets/image/headset2.png'),
         color:'#eee',
-        price:'$250'
+        price:'$250',
+        name:"Earphone"
     },
     {
         id:3,
         src:require('./assets/image/Head.png'),
         color:'pink',
-        price:'$450'
+        price:'$450',
+        name:"Headset"
     },
     {
         id:4,
         src:require('./assets/image/shoe7.png'),
         color:'#add8e6',
-        price:'$150'
+        price:'$150',
+        name:"Jordan"
     },
 ]
     return(
@@ -46,11 +50,11 @@ export default function RecentCard(){
 
 const ProductContainer = ({product}) =>(
 <View style={{padding:10}}>
-   <TouchableOpacity style={{backgroundColor:product.color, width:200,height:200,borderRadius:15,margin:5}}>
+   <TouchableOpacity activeOpacity={0.7} style={{backgroundColor:product.color, width:200,height:200,borderRadius:15,margin:5}}>
     <Image source={product.src}  style={{width:170,height:150,top:10,alignSelf:"center"}}/>
    </TouchableOpacity>
    <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-around",marginLeft:5}}>
-    <Text style={{fontSize:18,fontWeight:"700",marginRight:20}}>MacBook Air M1</Text>
+    <Text style={{fontSize:18,fontWeight:"700",marginRight:20}}>{product.name}</Text>
     <TouchableOpacity style={{marginRight:15}}>
     <Feather name="heart" color="grey" size={22} />
     </TouchableOpacity>

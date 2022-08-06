@@ -6,8 +6,8 @@ export default function HeaderTab(){
 const Categories = [
     {
         id:1,
-        src:require('./assets/image/headset2.jpg'),
-        name:"Headset"
+        src:require('./assets/image/laptop4.png'),
+        name:"Laptop"
     },
     {
         id:2,
