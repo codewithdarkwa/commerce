@@ -32,14 +32,14 @@ const Home = () =>{
 
 ]
     return(
-        <SafeAreaView style={{flex:1}}>
-        <ScrollView>
+    <SafeAreaView style={{flex:1}}>
+    <ScrollView>
         <HeaderTab />
         <Category />
         <Divider width={1}/>
         <CategoryCard />
         <RecentCard />
-        </ScrollView>
+     </ScrollView>
           <Divider width={0.5}/>
           <View style={{flexDirection:"row",justifyContent:"space-between", paddingHorizontal:15}}>
               { bottomIcons.map((item, i) => <BottomIcons key={i} item={item}/>)}
