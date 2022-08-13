@@ -57,3 +57,4 @@ const BottomIcons = ({item})=> (
      }}>{item.name}</Text>
     </TouchableOpacity>
  )
+ 
